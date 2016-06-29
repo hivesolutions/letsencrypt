@@ -54,4 +54,7 @@ class BaseController(appier.Controller):
         )
 
     def _jose_b64(self, data):
-        return base64.urlsafe_b64encode(data).decode("ascii").replace("=", "")
+        data = base64.urlsafe_b64encode(data)
+        data = appier.legacy.str(data)
+        data = data.replace("=", "")
+        return data
