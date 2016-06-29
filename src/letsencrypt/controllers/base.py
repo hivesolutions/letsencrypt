@@ -18,9 +18,9 @@ class BaseController(appier.Controller):
     def jwk_thumbprint(self, account_key = None):
         account_key = account_key or self._account_key()
         jwk = self._header(account_key)["jwk"]
-        as_json = json.dumps(jwk, sort_keys = True, separators = (",", ":"))
-        as_json = as_json.encode("utf-8")
-        hash = hashlib.sha256(as_json)
+        jwk_j = json.dumps(jwk, sort_keys = True, separators = (",", ":"))
+        jwk_j = jwk_j.encode("utf-8")
+        hash = hashlib.sha256(jwk_j)
         result = hash.digest()
         return self._jose_b64(result)
 
@@ -32,6 +32,7 @@ class BaseController(appier.Controller):
             "acme-v01.api.letsencrypt.org",
             "directory"
         )
+        accounts_path = os.path.normpath(accounts_path)
         if not account: account = os.listdir(accounts_path)[0]
         account_path = os.path.join(accounts_path, account)
         file_path = os.path.join(account_path, "private_key.json")
