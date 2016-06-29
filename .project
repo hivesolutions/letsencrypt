@@ -4,7 +4,6 @@
 	<comment></comment>
 	<projects>
 		<project>appier</project>
-		<project>appier_extras</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

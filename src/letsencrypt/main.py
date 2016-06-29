@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import appier
-import appier_extras
 
 class LetsEncryptApp(appier.WebApp):
 
@@ -10,9 +9,6 @@ class LetsEncryptApp(appier.WebApp):
         appier.WebApp.__init__(
             self,
             name = "lets_encrypt",
-            parts = (
-                appier_extras.AdminPart,
-            ),
             *args, **kwargs
         )
 
