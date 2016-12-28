@@ -15,3 +15,5 @@ class LetsEncryptApp(appier.WebApp):
 if __name__ == "__main__":
     app = LetsEncryptApp()
     app.serve()
+else:
+    __path__ = []
