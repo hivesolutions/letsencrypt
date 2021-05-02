@@ -10,11 +10,11 @@ A full list of client implementations can be checked [here](https://letsencrypt.
 
 ## Configuration
 
-| Name             | Type  | Default                    | Description                                                                                         |
-| ---------------- | ----- | -------------------------- | --------------------------------------------------------------------------------------------------- |
-| **MODE**         | `str` | `standalone`               | The execution mode to be used when handling "wellknown" routes (eg: `standalone`, `webroot`, etc.). |
-| **LE_PATH**      | `str` | `/etc/letsencrypt`         | The path to the directory where the Let’s Encrypt data files are going to be stored.                |
-| **WEBROOT_PATH** | `str` | `/var/letsencrypt/webroot` | The path to the "webroot" directory where the "wellknown" files should be stored.                   |
+| Name             | Type  | Default                        | Description                                                                                         |
+| ---------------- | ----- | ------------------------------ | --------------------------------------------------------------------------------------------------- |
+| **MODE**         | `str` | `standalone`                   | The execution mode to be used when handling "wellknown" routes (eg: `standalone`, `webroot`, etc.). |
+| **LE_PATH**      | `str` | `/etc/letsencrypt`             | The path to the directory where the Let’s Encrypt data files are going to be stored.                |
+| **WEBROOT_PATH** | `str` | `/var/lib/letsencrypt/webroot` | The path to the "webroot" directory where the "wellknown" files should be stored.                   |
 
 ## Example
 

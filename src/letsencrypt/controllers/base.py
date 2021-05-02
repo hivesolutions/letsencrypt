@@ -21,7 +21,7 @@ class BaseController(appier.Controller):
         return "%s.%s" % (token, thumbprint)
 
     def challenge_webroot(self, token):
-        webroot_path = appier.conf("WEBROOT_PATH", "/var/letsencrypt/webroot")
+        webroot_path = appier.conf("WEBROOT_PATH", "/var/lib/letsencrypt/webroot")
         token_path = os.path.join(webroot_path, ".well-known", "acme-challenge", token)
         if not os.path.exists(token_path):
             raise appier.NotFoundError(message = "Token file not found")
